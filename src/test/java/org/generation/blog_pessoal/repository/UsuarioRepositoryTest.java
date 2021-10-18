@@ -45,7 +45,7 @@ public class UsuarioRepositoryTest {
 		if(!usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
 			usuarioRepository.save(usuario);
 	}
-	
+	/*
 	@Test
 	@DisplayName("💾 Retorna Nome")
 	public void findByRetornaNome() {
@@ -53,7 +53,7 @@ public class UsuarioRepositoryTest {
 		Usuario usuario = usuarioRepository.findByNome("Kamilla Oliv");
 		assertTrue(usuario.getNome().equals("Kamilla Oliv"));
 	}
-	
+	*/
 	@Test
 	@DisplayName("💾 Retorna 3 Usuarios")
 	public void findAllByContainingIgnoreCaseRetornaTresUsuarios() {

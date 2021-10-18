@@ -38,6 +38,10 @@ public class Postagem {
 	@ManyToOne
 	private Tema tema;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+	
 	
 	public Tema getTema() {
 		return tema;
