@@ -42,10 +42,7 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
 	
-	
-	public Tema getTema() {
-		return tema;
-	}
+
 
 	public long getId() {
 		return id;
@@ -78,8 +75,22 @@ public class Postagem {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	
+	public Tema getTema() {
+		return tema;
+	}
+	
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public void Usuario (Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
 	
 }

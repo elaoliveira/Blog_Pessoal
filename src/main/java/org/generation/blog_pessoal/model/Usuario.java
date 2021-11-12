@@ -32,6 +32,11 @@ public class Usuario {
 	@NotNull
 	@Size(min = 5, max = 100)
 	private String senha;
+	
+	private String foto;
+	
+	private String tipo;
+	
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
@@ -44,6 +49,30 @@ public class Usuario {
 		this.senha = senha;
 	}
 
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+	public String getFoto() {
+		return foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
+	
 	public Usuario() {
 	}
 	
